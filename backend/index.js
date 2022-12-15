@@ -8,8 +8,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(require("./routes/todos.route"));
-app.use(morgan("dev"))
+app.use(require("./routes/index"));
+app.use(morgan("dev"));
 
 const { PORT, MONGO_SERVER } = process.env;
 

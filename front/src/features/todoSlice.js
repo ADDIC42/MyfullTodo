@@ -10,7 +10,7 @@ export const fetchTodos = createAsyncThunk(
   "todos/fetch",
   async (_, thunkAPI) => {
     try {
-      const res = await fetch("http://localhost:3050/");
+      const res = await fetch("http://localhost:3050");
       const todos = await res.json();
       if (todos.error) {
         return thunkAPI.rejectWithValue(todos.error);
